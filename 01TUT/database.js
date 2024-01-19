@@ -9,5 +9,13 @@ const pool = mysql.createPool({
 }).promise()
 
 
-const result = await pool.query("SELECT * FROM notes")
-console.log(result)
+
+async function getNotes () {
+    const [rows] = await pool.query('SELECT * FROM notes')
+    return rows 
+}
+
+
+const notes = await getNotes()
+//const rows = result[0]
+console.log(notes)
