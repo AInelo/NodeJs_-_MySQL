@@ -3,7 +3,6 @@ import express from "express";
 import { getNote, getNotes, createNote } from "./database.js";
 
 
-
 const app = express()
 app.use(express.json())
 
@@ -27,10 +26,9 @@ app.post("/notes", async (req, res) => {
 
 } )
 
-
 app.use((err, req,res, next) => {
     console.error(err.stack)
-    res.status(500).send('Something Broke!')
+    res.status(500).send('Something Broke! shit!')
 })
 
 app.listen(8001, () => {
