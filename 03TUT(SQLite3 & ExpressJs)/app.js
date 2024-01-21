@@ -14,18 +14,28 @@ const db = new sqlite3.Database("./test2.db", sqlite3.OPEN_READWRITE,(err)=> {
 // Drop table
 // db.run("DROP TABLE users")
 
-// INSERT data inot Database
-sql = `INSERT INTO users(first_name, last_name, username, password, email) VALUES (?,?,?,?,?)`;
-db.run(
-    sql,
-    ["TOTON", "Lionel", "ainelo2", "test", "totonlionel@gmail.com"], 
-    (err)=>{
-    if (err) return console.error(err.message);
-})
+// INSERT data into Database
+// sql = `INSERT INTO users(first_name, last_name, username, password, email) VALUES (?,?,?,?,?)`;
+// db.run(
+//     sql,
+//     ["TOTON", "Lionel", "ainelo2", "test", "totonlionel@gmail.com"], 
+//     (err)=>{
+//     if (err) return console.error(err.message);
+// })
 
 // Update data
 // sql = `UPDATE users SET first_name = ? WHERE id= ?`;
-// db.run(sql, ['Lio'])
+// db.run(sql, ['Lio', 2], (err) => {
+//     if (err) return console.error(err.message);
+// })
+
+//DETELE DATA from Database
+sql = `DELETE FROM users WHERE id=?`;
+db.run(sql, [2], (err) => {
+    if (err) return console.error(err.message);
+})
+
+
 
 // query data from database
 // sql = `SELECT * FROM users`;
