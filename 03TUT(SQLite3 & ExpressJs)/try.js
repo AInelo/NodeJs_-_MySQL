@@ -4,6 +4,7 @@ const addArrow = (x, y) => {
 };
 addArrow(2,5);
 
+
 const SubArrow = (x,y) => {
     const b = x - y;
     console.log(b);
