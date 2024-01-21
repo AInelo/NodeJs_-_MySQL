@@ -8,5 +8,5 @@ const SubArrow = (x,y) => {
     const b = x - y;
     console.log(b);
 };
-SubArrow(2,6);
+SubArrow(3,6);
 
