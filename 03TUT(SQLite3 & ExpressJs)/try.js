@@ -3,6 +3,9 @@ const addArrow = (x, y) => {
    console.log(b);
 } ;
 addArrow(2,5);
-const SubArrow = (x,y) => x - y;
+const SubArrow = (x,y) => {
+    x - y
+    
+} ;
 SubArrow(2,6);
 
