@@ -29,6 +29,8 @@ const db = new sqlite3.Database("./test2.db", sqlite3.OPEN_READWRITE,(err)=> {
 //     if (err) return console.error(err.message);
 // })
 
+
+
 //DETELE DATA from Database
 sql = `DELETE FROM users WHERE id=?`;
 db.run(sql, [2], (err) => {
