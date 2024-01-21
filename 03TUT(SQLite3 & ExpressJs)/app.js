@@ -15,10 +15,20 @@ const db = new sqlite3.Database("./test.db", sqlite3.OPEN_READWRITE,(err)=> {
 // db.run("DROP TABLE users")
 
 // INSERT data inot Database
-sql = `INSERT INTO users(first_name, last_name, username, password, email) VALUES (?,?,?,?,?)`;
-db.run(
-    sql,
-    ["TOTON", "Lionel", "ainelo", "test", "totonlionel@gmail.com"], 
-    (err)=>{
+// sql = `INSERT INTO users(first_name, last_name, username, password, email) VALUES (?,?,?,?,?)`;
+// db.run(
+//     sql,
+//     ["TOTON", "Lionel2", "ainelo", "test", "totonlionel@gmail.com"], 
+//     (err)=>{
+//     if (err) return console.error(err.message);
+// })
+
+
+// query data from database
+sql = `SELECT * FROM users`;
+db.all(sql, [], (err,rows) => {
     if (err) return console.error(err.message);
+    rows.forEach((row) => {
+        console.log(row);
+    });
 })
