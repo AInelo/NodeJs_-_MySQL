@@ -1,0 +1,22 @@
+{
+  "name": "01tut",
+  "version": "1.0.0",
+  "description": "1. Installation du package.json et package.lock.json pour faire fonctionner le projet",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^5.0.0-alpha.2",
+    "mysql2": "^3.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
