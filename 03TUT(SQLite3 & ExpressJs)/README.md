@@ -18,3 +18,9 @@ const db = new sqlite3.Database("./test.db", sqlite3.OPEN_READWRITE,(err)=> {
 })
 
 ```
+
+3. Activer le mode Columns pour bien lire les donnés intégré
+ 
+```bash
+.mode column
+```
